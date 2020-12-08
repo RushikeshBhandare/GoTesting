@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 )
 
 type Dg int
@@ -19,4 +20,8 @@ func main() {
 	y = int(x)
 	fmt.Println(y)
 	fmt.Printf("%T", y)
+
+	fmt.Println(runtime.GOARCH)
+	fmt.Println(runtime.GOOS)
+
 }
