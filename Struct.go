@@ -2,29 +2,42 @@ package main
 
 import "fmt"
 
-type Persone struct {
-	Name    string
-	age     int
-	address string
-	pincode int
+type Vehicle struct {
+	Door  int
+	color string
 }
 
-type College struct {
-	Persone     Persone
-	collageName string
-	Cousrse     string
+type truck struct {
+	Vehicle
+	FourWheel bool
+	Luxury    bool
+}
+
+type sedan struct {
+	Vehicle
+	FourWheel bool
+	Luxury    bool
 }
 
 func main() {
-	p1 := College{
-		Persone: Persone{
-			Name:    "Sunny Bhandare",
-			age:     21,
-			address: "Dhamani",
-			pincode: 416314,
+	Truck := truck{
+		Vehicle: Vehicle{
+			Door:  4,
+			color: "Black",
 		},
-		collageName: "PDVP Collage Tasgaon",
-		Cousrse:     "BCA",
+		FourWheel: true,
+		Luxury:    false,
 	}
-	fmt.Println(p1)
+	Sedan := sedan{
+		Vehicle: Vehicle{
+			Door:  2,
+			color: "Red",
+		},
+		FourWheel: false,
+		Luxury:    true,
+	}
+	fmt.Println(Truck, Sedan)
+
+	fmt.Println("Tuck Color :- ", Truck.color)
+	fmt.Println("Sedan Colr :-", Sedan.color)
 }
