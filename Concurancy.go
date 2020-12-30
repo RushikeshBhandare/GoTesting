@@ -28,7 +28,7 @@ func one() {
 	for i := 0; i < 10; i++ {
 		fmt.Println("One : ", i)
 	}
-	wg.Done()
+	wg.Done
 }
 
 func two() {
